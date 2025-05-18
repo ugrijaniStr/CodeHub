@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>Account Settings</title>
+</head>
+<body>
+    <h1>Account Settings</h1>
+
+    <form method="POST" action="/accountSettings">
+        <label>Username:</label>
+        <input type="text" name="username" value="{{.Username}}" required><br>
+
+        <label>Description:</label>
+        <input type="text" name="description" value="{{.Description}}"><br>
+
+        <label>Color:</label>
+        <input type="color" name="color" value="{{.Color}}"><br>
+
+        <button type="submit">Save Changes</button>
+    </form>
+</body>
+</html>

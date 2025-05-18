@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Posts</title>
+</head>
+<body>
+    <h1>All Posts</h1>
+    <ul>
+        {{range .Posts}}
+        <li>
+            <strong>{{.CreatedAt}}</strong> — 
+            <a href="/user/{{.Username}}/{{.Title}}">{{.Username}}</a>:
+            {{.Title}}
+        </li>
+        {{end}}
+    </ul>
+</body>
+</html>
