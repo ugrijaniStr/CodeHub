@@ -32,6 +32,7 @@ body {
     background: var(--bgColor);
     overflow-x: hidden;
     scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
 }
 
 .mainArea {
@@ -51,4 +52,61 @@ body {
 .mainBox {
     width: 82%;
     height: 100%;
+    display: block;
+}
+
+.navbar {
+    width: 100%;
+    height: 7%;
+    background: rgba(0, 0, 0, 0.103);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mainContent {
+    width: 100%;
+    height: 93%;
+}
+
+.navItems {
+    height: 100%;
+    &:first-child {
+        width: 80%;
+        color: var(--fontColor);
+        padding: 0.5%;
+    }
+
+    &:last-child {
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1%;
+        gap: 5%;
+        & > button {
+            width: 50%;
+            height: 50%;
+            border-radius: 8px;
+            outline: none;
+            cursor: pointer;
+            font-size: .9rem;
+            color: var(--fontColor);
+            border: none;
+        }
+    }
+}
+
+#logOut {
+    background: linear-gradient(to right,rgb(49, 49, 49), rgb(33, 33, 36), rgb(26, 26, 29));
+    &:hover {
+        background: none;
+        border: 1px solid black;
+        transition: all 0.3s ease;
+        outline: none;
+    }
+}
+
+#settings {
+    background: linear-gradient(to right,rgba(111, 50, 255, 0.685), rgb(130, 84, 255), rgb(146, 51, 255));
 }
