@@ -321,7 +321,6 @@ func listPostsHandler(w http.ResponseWriter, r *http.Request) {
 			continue
 		}
 
-		// Get username
 		var user struct {
 			Username string `bson:"username"`
 		}
