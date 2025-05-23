@@ -407,6 +407,9 @@ func main() {
 	collection = client.Database("codehub").Collection("users")
 	postsCollection = client.Database("codehub").Collection("posts")
 
+	fs := http.FileServer(http.Dir("templates/static"))
+	http.Handle("/static/", http.StripPrefix("/static/", fs))
+
 	http.HandleFunc("/", indexHandler)
 	http.HandleFunc("/login", loginHandler)
 	http.HandleFunc("/register", registerHandler)
